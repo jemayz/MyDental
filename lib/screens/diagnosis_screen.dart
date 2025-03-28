@@ -37,7 +37,7 @@ class _DiagnosisScreen extends State<DiagnosisScreen> {
     String base64Image = base64Encode(bytes);
 
     final url = Uri.parse(
-        "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=AIzaSyBK5GfKUeDNNPL_2ZlG1-KvR_OMj4zHr4Y");
+        "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=YOUR_API_KEY");
 
     final response = await http.post(
       url,
