@@ -1,0 +1,2 @@
+D:/AndroidStudioProjects/mymedic/android/app/.cxx/Debug/p6n2o5e3/x86_64/CMakeFiles/edit_cache.dir
+D:/AndroidStudioProjects/mymedic/android/app/.cxx/Debug/p6n2o5e3/x86_64/CMakeFiles/rebuild_cache.dir

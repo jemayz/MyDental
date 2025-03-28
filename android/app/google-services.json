@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "496632557634",
+    "project_id": "mydental-566ed",
+    "storage_bucket": "mydental-566ed.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496632557634:android:8f21e794053425b17b3ddb",
+        "android_client_info": {
+          "package_name": "com.example.mymedic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwitpZsFq-VqHMFX6rICaV6B5eRUGUHHI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

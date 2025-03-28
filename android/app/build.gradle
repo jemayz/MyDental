@@ -1,0 +1,52 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"  // Flutter plugin must be applied after Android and Kotlin
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace "com.example.mymedic"
+    compileSdk 34  // Set explicitly, instead of flutter.compileSdkVersion
+    ndkVersion = "25.1.8937393" // Ensure you have the correct NDK version installed
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        applicationId "com.example.mymedic"
+        minSdkVersion 23  // 🔥 Explicitly set to 23 to fix Firebase issue
+        targetSdkVersion 34  // Match latest stable SDK
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true  // 🔥 Enable code shrinking to match resource shrinking
+            shrinkResources true  // Keep this enabled
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    aaptOptions {
+        noCompress "tflite"
+        noCompress "lite"
+    }
+}
+
+flutter {
+    source "../.."
+}
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:33.11.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'  // 🔥 Ensure Firebase Auth is added
+}
